@@ -1,0 +1,57 @@
+﻿@model WebAPI.Models.Herramienta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="text-center text-primary">Detalles de la Herramienta</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idHer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idHer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.desHer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.desHer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.preUni)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.preUni)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.idHer }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebAPI.Models.Herramienta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-center text-primary">Listado de Herramientas</h2>
+
+<p>
+    @Html.ActionLink("Nueva Herramienta", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idHer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.desHer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idCar)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.preUni)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.stock)
+        </th>
+        <th>Acciones</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idHer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.desHer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCar)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.preUni)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.stock)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.idHer }) |
+            @Html.ActionLink("Detalles", "Details", new { id = item.idHer }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id = item.idHer })
+        </td>
+    </tr>
+}
+
+</table>
